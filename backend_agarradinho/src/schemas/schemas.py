@@ -15,6 +15,9 @@ class Produto(BaseModel):
     disponivel: bool = False
     descricao: str
 
+    class Config:
+        orm_mode = True
+
 class Pedido(BaseModel):
     id: Optional[str] = None
     usuario: Usuario
