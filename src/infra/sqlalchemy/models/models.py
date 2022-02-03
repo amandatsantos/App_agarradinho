@@ -12,5 +12,4 @@ class Produto(Base):
     disponivel = Column(Boolean)
 
 
-class Usuario(Base):
-    ...
+#class Usuario(Base):

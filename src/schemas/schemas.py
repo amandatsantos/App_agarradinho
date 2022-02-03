@@ -9,7 +9,6 @@ class Usuario(BaseModel):
 
 class Produto(BaseModel):
     id: Optional[str] = None
-    usuario:Usuario
     nome:str
     preco: float
     disponivel: bool = False
