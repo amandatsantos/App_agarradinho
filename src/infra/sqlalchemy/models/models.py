@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Float, Boolean
+from sqlalchemy import Column, Integer, String, Float, Boolean, true
 from src.infra.sqlalchemy.config.database import Base
 
 
@@ -8,8 +8,13 @@ class Produto(Base):
     id = Column(Integer, primary_key=True, index=True)
     nome = Column(String)
     descricao = Column(String)
-    preco= (Float)
+    preco= Column(Float)
     disponivel = Column(Boolean)
 
 
-#class Usuario(Base):
+class Usuario(Base):
+    __tablename__ = "Usuario"
+
+    id = Column(Integer, primary_key= True, index= True)
+    nome= Column(String)
+    telefone = Column(Integer)
